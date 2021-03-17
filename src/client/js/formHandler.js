@@ -48,7 +48,7 @@ async function updateUI (res) {
 }
 
 //API  response output (https://www.meaningcloud.com/developer/sentiment-analysis/doc/2.1/response)
-export const PolarityChecvkerReults = score_tag => {
+export const PolarityCheckerReults = score_tag => {
   if (score_tag === 'P+' || score_tag === 'P') {
     return 'Positive'
   } else if (score_tag === 'N+' || score_tag === 'N') {
