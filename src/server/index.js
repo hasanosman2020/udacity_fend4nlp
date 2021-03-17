@@ -9,7 +9,7 @@ const express = require('express')
 const app = express()
 
 //Dependencies
-var path = require('path')
+const path = require('path')
 const fetch = require('node-fetch')
 const mockAPIResponse = require('./mockAPI.js')
 
@@ -33,14 +33,13 @@ console.log(__dirname)
 //MeaningCloud credentials for API
 const baseURL = 'https://api.meaningcloud.com/sentiment-2.1?key='
 const apiKey = process.env.API_KEY
-let userInput = []
 //console.log(`Your API Key is ${process.env.API_KEY}`)
 
 // Setup server and designate what port the app will listen to for incoming requests
-const port = 8081;
+const port = 8081
 
 //Spin up the server
-const server = app.listen(port, listening);
+const server = app.listen(port, listening)
 
 //Callback to debug
 function listening () {
@@ -49,7 +48,7 @@ function listening () {
 }
 
 app.get('/', function (req, res) {
-  res.sendFile(path.resolve('src/client/views/index.html'));
+  res.sendFile(path.resolve('dist/index.html'))
 })
 
 //GET Request
@@ -59,24 +58,21 @@ app.get('/test', function (req, res) {
 
 let objMeaningCloudData = {}
 
-
 //POST route - the client sends the data (url) to the server and the server accepts the incoming data via this POST route
-app.post('/article', async(req, res) => {
+app.post('/article', async (req, res) => {
   userInput = req.body.formUrl
-  const apiData = `${baseURL}${apiKey}&lang=auto&url=${userInput}`
-  const response = await fetch(apiData), {
-    method: 'POST'
-  });
+  const apiData = await fetch(
+    `${baseURL}${apiKey}&lang=auto&url=${req.body.formUrl}`,
+    {
+      method: 'POST'
+    }
+  )
+
   try {
-  const meaningCloudData = await response.json()
-  console.log(response, meaningCloudData)
-  res.send(meaningCloudData);
-  } catch(error){
-    console.log("error", error);
+    const meaningCloudData = await apiData.json()
+    console.log('apiData', meaningCloudData)
+    res.send(meaningCloudData)
+  } catch (error) {
+    console.log('error', error)
   }
 })
-
-  
-
-
-
