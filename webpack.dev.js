@@ -8,9 +8,6 @@ module.exports = {
   mode: 'development',
   devtool: 'source-map',
   entry: './src/client/index.js',
-  devServer: {
-    contentBase: './dist'
-  },
   module: {
     rules: [
       {

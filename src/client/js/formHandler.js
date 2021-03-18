@@ -11,7 +11,7 @@ async function handleSubmit (event) {
   if (checkForUrl(formUrl)) {
     //POST request to server using fetch() method
 
-    fetch('http://localhost:8081/article', {
+    await fetch('http://localhost:8081/article', {
       method: 'POST',
       credentials: 'same-origin',
       mode: 'cors',
