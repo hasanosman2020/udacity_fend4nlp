@@ -25,21 +25,7 @@ module.exports = {
       },
       {
         test: /\.scss$/i,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              hmr: process.env.NODE_ENV === 'development'
-            }
-          },
-          'css-loader',
-          'postcss-loader',
-          'sass-loader'
-        ]
-      },
-      {
-        test: /\,css$/i,
-        use: [MiniCssExtractPlugin.loader, 'style-loader', 'css-loader']
+        use: ['css-loader', 'sass-loader']
       }
     ]
   },
@@ -57,8 +43,6 @@ module.exports = {
   ],
   output: {
     libraryTarget: 'var',
-    library: 'Client',
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    library: 'Client'
   }
 }

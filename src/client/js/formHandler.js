@@ -61,5 +61,3 @@ export const PolarityCheckerReults = score_tag => {
 }
 
 export { handleSubmit }
-export { checkForUrl }
-export { PolarityCheckerResults }
