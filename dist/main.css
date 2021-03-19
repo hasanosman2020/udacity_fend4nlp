@@ -1,0 +1,4 @@
+body{display:flex;flex-direction:column;min-height:100vh}main{flex:2}section{max-width:800px;margin:50px auto}
+
+form{border:1px solid #545454;border-radius:3px;padding:40px}input{padding:5px 20px;width:100%;line-height:16px;margin:10px 0}
+header{display:flex;justify-content:space-between;padding:10px 40px}

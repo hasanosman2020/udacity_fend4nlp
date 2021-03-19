@@ -27,6 +27,7 @@ async function handleSubmit (event) {
       //Updating UI  and displaying results to console
       .then(res => {
         updateUI(res)
+        console.log(res)
       })
   } else {
     alert('The URL you have entered is invalid. Please enter a valid URL.')

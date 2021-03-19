@@ -9,6 +9,7 @@ module.exports = {
   mode: 'development',
   devtool: 'source-map',
   entry: './src/client/index.js',
+  target: 'node',
   module: {
     rules: [
       {

@@ -7,6 +7,7 @@ const NodePolyfillPlugin = require('node-polyfill-webpack-plugin')
 module.exports = {
   mode: 'production',
   entry: './src/client/index.js',
+  target: 'node',
 
   module: {
     rules: [
