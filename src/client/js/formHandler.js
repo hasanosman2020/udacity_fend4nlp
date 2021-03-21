@@ -37,15 +37,15 @@ async function handleSubmit (event) {
 
 //GET function - get data required from result given by MeaningCloud API
 async function updateUI (res) {
-  document.querySelector('#subjectivity').innerText =
+  document.getElementById('subjectivity').innerHTML =
     'Subjectivity ' + res.subjectivity
 
-  document.querySelector('#confidence').innerText =
+  document.getElementById('confidence').innerHTML =
     'Confidence' + res.confidence + '%'
 
-  document.querySelector(
-    '#polarity'
-  ).innerText = `Polarity: ${PolarityCheckerResults(res.score_tag)}`
+  document.getElementById(
+    'polarity'
+  ).innerHTML = `Polarity: ${PolarityCheckerResults(res.score_tag)}`
 }
 
 //API  response output (https://www.meaningcloud.com/developer/sentiment-analysis/doc/2.1/response)

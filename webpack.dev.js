@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const NodePolyfillPlugin = require('node-polyfill-webpack-plugin')
+var requirejs = require('requirejs')
 
 module.exports = {
   mode: 'development',

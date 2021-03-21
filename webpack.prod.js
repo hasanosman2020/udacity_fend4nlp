@@ -3,6 +3,7 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const NodePolyfillPlugin = require('node-polyfill-webpack-plugin')
+var requirejs = require('requirejs')
 
 module.exports = {
   mode: 'production',

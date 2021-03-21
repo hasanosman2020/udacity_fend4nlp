@@ -36,7 +36,7 @@ const apiKey = process.env.API_KEY
 //console.log(`Your API Key is ${process.env.API_KEY}`)
 
 // Setup server and designate what port the app will listen to for incoming requests
-const port = 8081
+const port = 8000
 
 //Spin up the server
 const server = app.listen(port, listening)
